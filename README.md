@@ -1,14 +1,15 @@
-# DPLOY
+# DPLOY RED
 
-**DPLOY is an FTP/SFTP deployment tool built in node.js**  
+**DPLOY RED is an FTP/SFTP deployment tool built in node.js, based on [DPLOY](http://lucasmotta.github.io/dploy/).**  
+
 Uploads the latest changes by comparing the version on your server with your git repository.
 
 
 ## Install
-Install DPLOY and it's dependancies globally by running:
+Install DPLOY RED and it's dependencies globally by running:
 
 ```
-npm install dploy -g
+npm install https://github.com/redacademy/dploy-red.git -g
 ```
 
 ## Help
@@ -26,7 +27,7 @@ dploy --version
 Will deploy the first environment that you have on your `dploy.yaml`
 
 ### dploy install
-Will install the `dploy.yaml` file and set up a `post-commit` script on your `.git/hooks` folder so you can _DPLOY_ from your commit message as well.
+Will install the `dploy.yaml` file and set up a `post-commit` script on your `.git/hooks` folder so you can _DPLOY RED_ from your commit message as well.
 
 ### dploy …rest
 Anything else after the `dploy` command will be used as an environment, like this:  
@@ -34,7 +35,7 @@ Anything else after the `dploy` command will be used as an environment, like thi
 ```
 dploy dev stage production
 ```  
-In this case _DPLOY_ will expect to find **dev**, **stage** and **production** configs on your `dploy.yaml` file.
+In this case _DPLOY RED_ will expect to find **dev**, **stage** and **production** configs on your `dploy.yaml` file.
 
 ## Basic example
 If you only have one server, just name whatever you want and run `dploy`.   
@@ -66,7 +67,7 @@ dploy server_name
 * Type: `String`  
 * Default: `ftp`  
 
-_DPLOY_ has two available schemes: **ftp** and **sftp**. You must provide this information, because we don't like to play guessing games.
+_DPLOY RED_ has two available schemes: **ftp** and **sftp**. You must provide this information, because we don't like to play guessing games.
 
 ### host
 * Type: `String`  
@@ -86,7 +87,7 @@ The port that your hosting server is using. Note that the default value is diffe
 * Type: `String`  
 * Default: `none`
 
-If you don't set a password and if you are using SFTP, DPLOY will try look for the **privateKey** and **publicKey**.  
+If you don't set a password and if you are using SFTP, DPLOY RED will try look for the **privateKey** and **publicKey**.  
 But if we can't find any of those options, you will be prompted to type the password manually.
 
 ### privateKey
@@ -183,7 +184,8 @@ Exclude files that are tracked by git, but that you don't want on your server. Y
 * Default: `none`    
 
 The **include** parameter is similar to the **exclude**. But instead of an array, it expects an object.  
-The **key** of your object is what *DPLOY* is gonna search locally and the **value** of your object is the destination on the remote server (this path is relative to the **path.remote**!). Again you can also target individual files or multiple using [glob](https://github.com/isaacs/minimatch) on the key of your object.
+
+The **key** of your object is what *DPLOY RED* is gonna search locally and the **value** of your object is the destination on the remote server (this path is relative to the **path.remote**!). Again you can also target individual files or multiple using [glob](https://github.com/isaacs/minimatch) on the key of your object.
 
 ```
 include:
@@ -194,7 +196,7 @@ include:
 
 ## Ignore include flag
 If you are using the **include** parameter on your `dploy.yaml`, you will note that those files will always be uploaded to the server, no matter if they were modified or not (because they aren't necessarily tracked by git).  
-In order to avoid re-uploading those files all the time, there's a tag called `--ignore-include` that you can set when calling _DPLOY_.  
+In order to avoid re-uploading those files all the time, there's a tag called `--ignore-include` that you can set when calling _DPLOY RED_.  
   
 ```
 dploy stage --ignore-include
@@ -219,7 +221,7 @@ dploy stage -c
 
 ## Multiple environments
 Most of the times we have to work on different environments (dev, stage, production…).  
-With _DPLOY_ is really easy to make multiple deploys using a single command. All you need to do is create different configurations on your `dploy.yaml` file, like this:
+With _DPLOY RED_ is really easy to make multiple deploys using a single command. All you need to do is create different configurations on your `dploy.yaml` file, like this:
 
 ```
 dev:
@@ -283,8 +285,9 @@ server_name:
 ```
 
 # Contribute
-Feel free to contribute to DPLOY in any way. If you have any issues, questions or suggestions, just create it at the issues page.  
-If you want to create your own fork, follow the instructions bellow to build **DPLOY**:  
+Feel free to contribute to DPLOY RED in any way. If you have any issues, questions or suggestions, just create it at the issues page.
+
+If you want to create your own fork, follow the instructions bellow to build **DPLOY RED**:  
 
 ### build
 You need to install the dependencies from npm first and then just use grunt to compile the CoffeeScript:
