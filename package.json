@@ -17,6 +17,9 @@
   "bin": {
     "dploy": "./bin/dploy"
   },
+  "scripts": {
+    "prepare": "grunt"
+  },
   "engines": {
     "node": ">= 0.10.x"
   },
@@ -32,10 +35,11 @@
   },
   "devDependencies": {
     "grunt": "~0.4.x",
+    "grunt-bump": "~0.0.x",
+    "grunt-cli": "^1.2.0",
+    "grunt-coffeelint": "0.0.x",
     "grunt-contrib-coffee": "~0.7.x",
     "grunt-contrib-watch": "~0.5.x",
-    "grunt-bump": "~0.0.x",
-    "grunt-shell": "~0.6.x",
-    "grunt-coffeelint": "0.0.x"
+    "grunt-shell": "~0.6.x"
   }
 }
