@@ -1,7 +1,7 @@
 {
-  "name": "dploy",
-  "version": "1.2.0",
-  "author": "Lucas Motta <http://lucasmotta.com>",
+  "name": "dploy-red",
+  "version": "0.1",
+  "author": "RED Acaademy <http://redacademy.com>",
   "description": "Command line tool to deploy websites using FTP/SFTP and git.",
   "keywords": [
     "ftp",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/LeanMeanFightingMachine/dploy"
+    "url": "https://github.com/redacademy/dploy-red"
   },
   "main": "./lib/dploy",
   "bin": {
