@@ -9,7 +9,7 @@ Uploads the latest changes by comparing the version on your server with your git
 Install DPLOY RED and it's dependencies globally by running:
 
 ```
-npm install https://github.com/redacademy/dploy-red.git -g
+npm install https://github.com/vovantics/dploy-red.git -g
 ```
 
 ## Help

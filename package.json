@@ -1,7 +1,7 @@
 {
   "name": "dploy-red",
   "version": "1.0.0",
-  "author": "RED Acaademy <http://redacademy.com>",
+  "author": "Stevo <http://stephenvovan.com>",
   "description": "Command line tool to deploy websites using FTP/SFTP and git.",
   "keywords": [
     "ftp",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/redacademy/dploy-red"
+    "url": "https://github.com/vovantics/dploy-red"
   },
   "main": "./lib/dploy",
   "bin": {
