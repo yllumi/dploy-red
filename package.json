@@ -36,6 +36,7 @@
     "grunt-coffeelint": "0.0.x",
     "grunt-contrib-coffee": "~0.7.x",
     "grunt-contrib-watch": "~0.5.x",
-    "grunt-shell": "~0.6.x"
+    "grunt-shell": "~0.6.x",
+    "minimatch": "^3.0.2"
   }
 }
