@@ -279,9 +279,15 @@ module.exports = class Deploy
 					if data.length > 1
 						# If you set a local path, we need to replace the remote name to match the remote path
 						remoteName = if @config.path.local then data[1].split(@config.path.local).join("") else data[1]
+						if typeof data[2] != "undefined"
+							remoteRename = if @config.path.local then data[2].split(@config.path.local).join("") else data[2]
 
+						# The file was renamed
+						if data[0] == "R100"
+							@toDelete.push name:data[1], remote:remoteName if @canDelete data[1]
+							@toUpload.push name:data[2], remote:remoteRename if @canUpload data[2]
 						# The file was deleted
-						if data[0] == "D"
+						else if data[0] == "D"
 							@toDelete.push name:data[1], remote:remoteName if @canDelete data[1]
 						# Everything else
 						else
